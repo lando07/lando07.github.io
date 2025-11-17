@@ -1,10 +1,143 @@
 <!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Unfinished</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landon Smith | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
+
 </head>
-<html>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="nav-toggle">&#9776;</button> <!-- hamburger icon -->
+            <div class="nav-links">
+                <a href="#profile">Profile</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="projects.html">Full Projects Page</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+    <div class="header-left">
+        <h2>Profile</h2>
+        <img src="assets/pfp.png" alt="Profile Photo" class="profile-photo" />
+    </div>
+    <div class="header-right">
+        <h1>Landon Smith</h1>
+        <p>Computer Engineering Honors Student @ UT San Antonio</p>
+        <p>Former Lead Engineer, Designer, Driver, and Programmer for FTC Team 24764 Twisted Transistors </p>
+        <p>Official Programming Mentor for FTC Team 24764 Twisted Transistors</p>
+        <p>landon.smith@my.utsa.edu</p>
+    </div>
+</header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I am a Computer Engineering student at the University of Texas at San Antonio with a 4.0 GPA and Honors
+            College standing.
+            I specialize in Java development, robotics programming, embedded systems, and network infrastructure. I am
+            passionate about
+            engineering systems that are clean, efficient, and reliable.
+        </p>
+
+        <main class="container">
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Java • C++ (basic) • MATLAB</li>
+            <li>Network Infrastructure & Firewall Configuration</li>
+            <li>Embedded Systems • Raspberry Pi • Docker • Server Hosting</li>
+            <li>CAD & Engineering Documentation</li>
+            <li>Leadership • Communication • Collaboration</li>
+            <li>HTML + CSS</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="item">
+            <h3>Robotics Mentor — FTC Team 24764</h3>
+            <span>Flour Bluff High School • Aug 2025 – Present</span>
+            <ul>
+                <li>Mentored robotics programming and documentation with advanced Java experience.</li>
+                <li>Maintained the autonomous and tele-op robot codebase.</li>
+                <li>Improved development efficiency by up to 90%.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3>Rental Equipment & Customer Service</h3>
+            <span>Holiday Beach Rentals • Apr 2024 – Aug 2025</span>
+            <ul>
+                <li>Managed reservations and equipment inventory.</li>
+                <li>Repaired canopy systems, extending lifespan by 6 months.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3>Lead Engineer & Programmer — FTC Team 24764</h3>
+            <span>Flour Bluff HS • Aug 2024 – May 2025</span>
+            <ul>
+                <li>Led team to UIL State Semi-Finals (3rd Place, 5A division).</li>
+                <li>Sole developer of full robotics codebase with complete documentation.</li>
+                <li>Cut development time by 90% and doubled maintainability.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3>Lead Livestream Producer</h3>
+            <span>Flour Bluff Sports Information • Aug 2024 – May 2025</span>
+            <ul>
+                <li>Produced high-quality livestreams for football games.</li>
+                <li>Boosted stream quality (2×), viewership (1000%), and retention (50%).</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="item">
+            <h3>Home Network Infrastructure</h3>
+            <ul>
+                <li>Built a secure LAN with malware protection and firewall mitigation.</li>
+                <li>Reduced ping by 10×, boosted speeds by 5×, and cut malicious activity by 99%.</li>
+            </ul>
+        </div>
+
+        <div class="item">
+            <h3>Embedded Systems & Servers</h3>
+            <ul>
+                <li>Hosted Docker-based web servers on Raspberry Pi 5.</li>
+                <li>Deployed Home Assistant and an LLM front-end on local hardware.</li>
+                <li>Managed a NAS with OpenMediaVault and an ad-blocking DNS service.</li>
+            </ul>
+        </div>
+    </section>
+    </main>
+
+    <footer>
+        © 2025 Landon Smith (This website portfolio is still under construction)
+    </footer>
 </body>
+<script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+        links.classList.toggle('active');
+    });
+</script>
 
 </html>

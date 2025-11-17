@@ -1,5 +1,291 @@
-@charset "utf-8";
+/* Dark Theme with Navy Blue Accents */
+
 body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0f0f14;
+    /* near-black dark mode */
+    color: #e2e2e2;
+    line-height: 1.6;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
-body {
+
+/* Navbar styling for dark-mode/navy blue theme */
+nav {
+    background: #0a0e27;
+    /* match header deep navy */
+    padding: 1rem 1rem;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    gap: 2rem;
+    /* spacing between links */
+    border-bottom: 2px solid #1a2a55;
+    /* subtle navy accent */
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    margin-left: 1rem;
+    /* space after hamburger on desktop */
+
+}
+
+.navbar {
+    background: #0a0e27;
+    /* deep navy */
+
+    border-bottom: 2px solid #1a2a55;
+    margin-bottom: 1.5rem;
+    /* space between navbar and header */
+}
+
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    nav {
+        display: block;
+    }
+
+    .nav-toggle {
+        display: block !important;
+        margin-left: auto;
+        /* push hamburger to the right */
+        padding: 0.25rem 0.5rem;
+        /* optional padding around icon */
+    }
+
+    .nav-links {
+        max-height: 0;
+        /* hide menu by default */
+        overflow: hidden;
+        /* hide contents when collapsed */
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        background: #0a0e27;
+        border-radius: 5px;
+        padding: 0;
+        /* no extra space when closed */
+        transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    }
+
+    .nav-links.active {
+        max-height: 500px;
+        /* large enough for all links */
+        padding: 0.5rem 0;
+        /* padding appears as menu opens */
+    }
+
+
+        header {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .header-right {
+            align-items: center;
+        }
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #c7d2ff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+nav a {
+    color: #c7d2ff;
+    /* soft blue for links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffffff;
+    /* highlight on hover */
+    border-bottom: 2px solid #4a63ff;
+    /* bright navy accent on hover */
+}
+
+nav a.active {
+    color: #ffffff;
+    /* active link color */
+    border-bottom: 2px solid #4a63ff;
+    /* underline active link */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: auto;
+    flex-wrap: wrap;
+    /* allow wrapping on small screens */
+}
+
+header {
+    display: flex;               /* left and right side by side */
+    align-items: center;         /* vertically align content */
+    gap: 3rem;                   /* more space between left and right */
+    background: #0a0e27;         /* deep navy */
+    color: white;
+    padding: 3em 2rem;          /* more generous padding */
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+}
+
+/* Left section: h2 above image */
+.header-left {
+    display: flex;
+    flex-direction: column;      /* stack h2 above image */
+    align-items: center;         /* center items horizontally */
+    gap: 1rem;                   /* spacing between h2 and image */
+}
+
+.header-left h2 {
+    font-size: 1.4rem;           /* smaller than main h1 */
+    margin: 0;
+    font-weight: 500;
+    color: #c7d2ff;              /* soft blue for contrast */
+}
+
+.profile-photo {
+    width: 130px;                /* slightly larger for balance */
+    height: 130px;
+    border-radius: 50%;          /* circular image */
+    object-fit: cover;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5); /* subtle shadow for depth */
+}
+
+/* Right section: h1 and p stacked */
+.header-right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;                 /* spacing between h1 and p */
+}
+
+.header-right h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header-right p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.85;
+    line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        margin-bottom: 1rem;
+        /* smaller gap on mobile */
+    }
+
+    header h1 {
+        font-size: 2rem;
+        /* scale down header text */
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;  /* stack left and right vertically */
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+        gap: 1.5rem;            /* reduce space on mobile */
+    }
+
+    .header-left {
+        gap: 0.5rem;
+    }
+
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-right h1 {
+        font-size: 2rem;
+    }
+
+    .header-right p {
+        font-size: 0.9rem;
+    }
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2.5rem;
+    background: #14141d;
+    /* dark gray/navy blend */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+h2 {
+    border-left: 5px solid rgb(0, 0, 255);
+    /* bright navy-blue accent */
+    padding-left: 10px;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    color: #ffffff;
+}
+
+.item {
+    margin-bottom: 1.5rem;
+}
+
+.item h3 {
+    margin: 0;
+    color: #c7d2ff;
+    /* softer blue highlight */
+}
+
+.item span {
+    color: #8a8fa6;
+    font-size: 0.9rem;
+}
+
+ul li {
+    margin-bottom: 0.4rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #0a0e27;
+    color: white;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
 }
